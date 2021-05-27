@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pokemoni>
+   <Pokemon id="175">
+      <ime>Bulbasaur</ime>
+      <hp>45</hp>
+      <attack>49</attack>
+      <defense>49</defense>
+      <SpAttack>65</SpAttack>
+      <SpDefense>45</SpDefense>
+      <speed>45</speed>
+      <total>318</total>
+      <average>53</average>
+   </Pokemon>
+   <Pokemon id="004">
+      <ime>Charmander</ime>
+      <hp>39</hp>
+      <attack>52</attack>
+      <defense>43</defense>
+      <SpAttack>60</SpAttack>
+      <SpDefense>50</SpDefense>
+      <speed>65</speed>
+      <total>309</total>
+      <average>51.5</average>
+   </Pokemon>
+   <Pokemon id="006">
+      <ime>Charizard</ime>
+      <hp>78</hp>
+      <attack>84</attack>
+      <defense>78</defense>
+      <SpAttack>109</SpAttack>
+      <SpDefense>85</SpDefense>
+      <speed>100</speed>
+      <total>534</total>
+      <average>89</average>
+   </Pokemon>
+   <Pokemon id="007">
+      <ime>Squirtle</ime>
+      <hp>44</hp>
+      <attack>48</attack>
+      <defense>65</defense>
+      <SpAttack>50</SpAttack>
+      <SpDefense>64</SpDefense>
+      <speed>43</speed>
+      <total>314</total>
+      <average>52.33</average>
+   </Pokemon>
+   <Pokemon id="025">
+      <ime>Pikachu</ime>
+      <hp>35</hp>
+      <attack>55</attack>
+      <defense>40</defense>
+      <SpAttack>50</SpAttack>
+      <SpDefense>50</SpDefense>
+      <speed>90</speed>
+      <total>320</total>
+      <average>53.33</average>
+   </Pokemon>
+   <Pokemon id="039">
+      <ime>Jigglypuff</ime>
+      <hp>115</hp>
+      <attack>45</attack>
+      <defense>20</defense>
+      <SpAttack>45</SpAttack>
+      <SpDefense>25</SpDefense>
+      <speed>20</speed>
+      <total>270</total>
+      <average>45</average>
+   </Pokemon>
+   <Pokemon id="143">
+      <ime>Snorlax</ime>
+      <hp>160</hp>
+      <attack>110</attack>
+      <defense>65</defense>
+      <SpAttack>65</SpAttack>
+      <SpDefense>110</SpDefense>
+      <speed>30</speed>
+      <total>540</total>
+      <average>90</average>
+   </Pokemon>
+   <Pokemon id="152">
+      <ime>Chikorita</ime>
+      <hp>45</hp>
+      <attack>49</attack>
+      <defense>65</defense>
+      <SpAttack>49</SpAttack>
+      <SpDefense>65</SpDefense>
+      <speed>45</speed>
+      <total>318</total>
+      <average>53</average>
+   </Pokemon>
+   <Pokemon id="175">
+      <ime>Togepi</ime>
+      <hp>35</hp>
+      <attack>20</attack>
+      <defense>65</defense>
+      <SpAttack>40</SpAttack>
+      <SpDefense>65</SpDefense>
+      <speed>20</speed>
+      <total>245</total>
+      <average>40.83</average>
+   </Pokemon>
+</Pokemoni>

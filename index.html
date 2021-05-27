@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Pokemoni</title>
+		<meta author="Karla Gospodarić"/>
+        <style>
+           
+            @media(min-width: 901px){
+                table,th,td {
+                    border : 1px solid black;
+                    border-collapse: collapse;
+                }
+                table{
+                    align-content: center;
+                    margin: auto;
+                }
+                th,td {
+                    padding: 5px;
+                }
+                #wrapper{
+                    max-width: 90%;
+                    margin: auto;
+                    color:rgb(255, 225, 79);
+                }
+                h1{
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    color:rgb(255, 225, 79);
+                }
+                body{
+                    background-color: black;
+                    background-image: url("p1.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: initial;
+                }
+                button, input{
+                    background-color: black;
+                    color:rgb(255, 225, 79);
+                }
+            }
+            @media(max-width: 900px){
+                table,th,td {
+                    border : 1px solid black;
+                    border-collapse: collapse;
+                    width: 50%;
+                }
+                table{
+                    align-content: center;
+                    margin: auto;
+                }
+                th,td {
+                    padding: 5px;
+                }
+                #wrapper{
+                    max-width: 90%;
+                    margin: auto;
+                    color:black
+                }
+                h1{
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    color:black;
+                }
+                body{
+                    background-color: rgb(251, 217, 24);
+                    background-image: url("pika.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+                button, input{
+                    background-color: rgb(251, 217, 24);
+                    color:black;
+                }
+            }
+        </style>
+        <script type = "text/javascript"> 
+            function dohvati(){
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        prikazi(this);
+                    }
+                };
+                xhttp.open("GET","pokemoni.xml", true);
+                xhttp.send();
+            }
+            function prikazi(xml) {
+                var xmlDoc = xml.responseXML;
+                var table="<tr><th>Ime</th><th>HP</th><th>Attack</th><th>Defense</th><th>SpAttack</th><th>SpDefense</th><th>Speed</th><th>Total</th><th>Average</th></tr>";
+                var x = xmlDoc.getElementsByTagName("Pokemon");
+                var i;
+                for (i = 0; i <x.length; i++) {
+                    table += "<tr><td>" + x[i].getElementsByTagName("ime")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("hp")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("attack")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("defense")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("SpAttack")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("SpDefense")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("speed")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("total")[0].childNodes[0].nodeValue + "</td><td>" +
+                        x[i].getElementsByTagName("average")[0].childNodes[0].nodeValue + "</td></tr>"
+                }
+                document.getElementById("pokemon").innerHTML = table;
+            }
+       
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Pokemoni</h1>
+            <p>Dobro došli na stranicu gdje možete upoznati moje najdraže Pokemone i saznati nešo više o njima. Klikom na gumb će vam se pokazati
+                tablica mojih Pokemona.
+                <input type = "button" value = "Prikaži Pokemone" onclick = "dohvati();" />
+            </p>
+            <br>
+            <table id="pokemon"></table>
+            <p>Klikom na sljedeći link možete pronaći sve Pokemone, te ih bolje upoznati i pronaći svoje najdraže. 
+                <button><a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_base_stats_(Generation_VIII-present)" target="_blank">Svi Pokemoni</a></button>
+            </p>
+        </div> 
+    </body>
+</html>
